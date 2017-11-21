@@ -33,7 +33,7 @@ $NachrichtID				=	$array["BkToCstmrDbtCdtNtfctn"]["GrpHdr"]["MsgId"];
 $HergestelltDatum			=	date("d.m.Y H:i", strtotime($array["BkToCstmrDbtCdtNtfctn"]["GrpHdr"]["CreDtTm"]));
 $AnzahlSeiten				=	$array["BkToCstmrDbtCdtNtfctn"]["GrpHdr"]["MsgPgntn"]["PgNb"];
 $LetzteSeite				=	$array["BkToCstmrDbtCdtNtfctn"]["GrpHdr"]["MsgPgntn"]["LastPgInd"];
-$DetailInfo					=	$array["BkToCstmrDbtCdtNtfctn"]["GrpHdr"]["AddtlInf"];
+$DetailInfo				=	$array["BkToCstmrDbtCdtNtfctn"]["GrpHdr"]["AddtlInf"];
 
 // Nachrichten Daten
 $BenachrichtigungID			=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Id"];
@@ -45,22 +45,22 @@ $NameEmpfaenger				=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Acct"]["Ownr"]["
 
 // Einzel Daten
 $TeilnehmernummerNr			=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryRef"];
-$TotalUeberweisungen		=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["Amt"];
+$TotalUeberweisungen			=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["Amt"];
 $SollHabenIndikator			=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["CdtDbtInd"];
 
 // Transaction Details
 $TeilnehmernummerNr			=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryRef"];
-$TotalUeberweisungen		=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["Amt"];
+$TotalUeberweisungen			=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["Amt"];
 $SollHabenIndikator			=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["CdtDbtInd"];
 $AnzahlBuchungen			=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["Btch"]["NbOfTxs"];
 
 
 // Einzelne Transationen
 $AcctSvcrRef				=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["TxDtls"][0]["Refs"]["AcctSvcrRef"];
-$PmtInfId					=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["TxDtls"][0]["Refs"]["PmtInfId"];
+$PmtInfId				=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["TxDtls"][0]["Refs"]["PmtInfId"];
 $EndToEndId 				=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["Btch"]["NbOfTxs"];
-$Prtry_Tp					=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["TxDtls"][0]["Refs"]["Prtry"]["Tp"];
-$Prtry_Ref					=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["TxDtls"][0]["Refs"]["Prtry"]["Ref"];
+$Prtry_Tp				=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["TxDtls"][0]["Refs"]["Prtry"]["Tp"];
+$Prtry_Ref				=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["TxDtls"][0]["Refs"]["Prtry"]["Ref"];
 
 // AddtlNtryInf
 $AddtlNtryInf				=	$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["AddtlNtryInf"];
@@ -98,9 +98,9 @@ echo '<table class="blueTable">';
 echo '<tr class="row">
 <th>Von Datum:</th>
 <th>Bis Datum:</th>
-<th>IBAN Empf‰nger:</th>
-<th>Name Empf‰nger:</th>
-<th>Total ‹berweisungen:</th>
+<th>IBAN Empf√§nger:</th>
+<th>Name Empf√§nger:</th>
+<th>Total √úberweisungen:</th>
 <th>Soll/Haben Indikator:</th>
 <th>Total Buchungen:</th>
 </tr>';
@@ -130,11 +130,11 @@ echo "Benachrichtigungs-ID: " . $BenachrichtigungID . "<br>";
 echo "Erstellungs-Datum: " . $ErstellungsDatum . "<br>";
 echo "Von Datum: " . $ZeitraumVon . "<br>";
 echo "Bis Datum: " . $ZeitraumBis . "<br>";
-echo "IBAN Empf‰nger: " . $IBANEmpfaenger . "<br>";
-echo "Name Empf‰nger: " . $NameEmpfaenger . "<br>";
+echo "IBAN Empf√§nger: " . $IBANEmpfaenger . "<br>";
+echo "Name Empf√§nger: " . $NameEmpfaenger . "<br>";
 
 echo "Teilnehmernummer Nr: " . $TeilnehmernummerNr . "<br>";
-echo "Total ‹berweisungen: " . $TotalUeberweisungen . "<br>";
+echo "Total √úberweisungen: " . $TotalUeberweisungen . "<br>";
 echo "Soll/Haben Indikator: " . $SollHabenIndikator . "<br>";
 
 echo "PmtInfId: " . $PmtInfId . "<br>";
@@ -179,7 +179,7 @@ echo '<tr class="row">
 <th>BICFI</th>
 <th>Referenz Nr.</th>
 <th>Betrag</th>
-<th>Geb¸ren</th>
+<th>Geb√ºren</th>
 </tr>';
 foreach($array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["TxDtls"] as $key => $value){
 
