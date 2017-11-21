@@ -200,7 +200,7 @@ foreach($array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["TxDtls"] 
 	     </td>
 		  <td>'.$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["TxDtls"][$key]["RltdAgts"]["DbtrAgt"]["FinInstnId"]["BICFI"].'
 	     </td>
-		  <td><b><a href="../rechnung_eser.php?txtFirma='.substr($array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["TxDtls"][$key]["RmtInf"]["Strd"]["CdtrRefInf"]["Ref"], 0, -1).'" target="_top">'.substr($array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["TxDtls"][$key]["RmtInf"]["Strd"]["CdtrRefInf"]["Ref"], 0, -1).'</b>
+		  <td>'.$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["TxDtls"][$key]["RmtInf"]["Strd"]["CdtrRefInf"]["Ref"].'
 	     </td>
 		  <td>'.$array["BkToCstmrDbtCdtNtfctn"]["Ntfctn"]["Ntry"]["NtryDtls"]["TxDtls"][$key]["Amt"].'
 		 </td>
